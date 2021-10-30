@@ -27,7 +27,7 @@ const AddService = () => {
             >
               <input
                 {...register("sName", { required: true })}
-                placeholder="Servcie Name"
+                placeholder="Travel Spot"
               />
               <textarea
                 {...register("sdescription", { required: true })}
@@ -37,6 +37,11 @@ const AddService = () => {
                 type="number"
                 {...register("price", { required: true })}
                 placeholder="Price"
+              />
+              <input
+                type="number"
+                {...register("travel_time", { required: true })}
+                placeholder="Travel Time"
               />
               <input
                 type="url"

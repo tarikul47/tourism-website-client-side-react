@@ -1,33 +1,27 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Service.css";
 
-const Service = () => {
+const Service = (props) => {
+  const {_id, sName, sdescription, price, sImage, travel_time} = props.service;
   return (
     <div className="col-lg-4 col-md-6">
       <div className="single_place">
         <div className="thumb">
-          <img
-            src="https://preview.colorlib.com/theme/travelo/img/place/x1.png.pagespeed.ic.PhjDw51Df0.webp"
-            alt=""/>
-          <a href="#" className="prise">$50</a>
+          <img src={sImage} alt="img"/>
+          <span className="prise">${price}</span>
         </div>
         <div className="place_info">
-          <a href="destination_details.html">
-            <h3>California</h3>
-          </a>
-          <p>United State of America</p>
-          <div className="rating_days d-flex justify-content-between">
+          <h3>{sName}</h3>
+          <p>{sdescription}</p>
+          <div className="d-flex justify-content-between">
             <span className="d-flex justify-content-center align-items-center">
-              <i className="fa fa-star"></i>
-              <i className="fa fa-star"></i>
-              <i className="fa fa-star"></i>
-              <i className="fa fa-star"></i>
-              <i className="fa fa-star"></i>
-              <a href="#">(20 Review)</a>
+              <Link to= {`/booking/${_id}`}>
+                <button className="btn btn-info">Book Now</button>
+              </Link>
             </span>
             <div className="days">
-              <i className="fa fa-clock-o"></i>
-              <a href="#">5 Days</a>
+              <span href="#">{travel_time} Days</span>
             </div>
           </div>
         </div>

@@ -32,7 +32,7 @@ const Header = () => {
                   Home
                 </Link>
               </li>
-              {user.email ? (
+              {!user.email ? (
                 <>
                   <li className="nav-item">
                     <Link to="/login" className="nav-link">
