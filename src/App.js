@@ -9,7 +9,7 @@ import Booking from './pages/Booking/Booking';
 import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
 import Footer from './pages/Shared/Footer/Footer';
 import './App.css';
-import Service from './pages/Home/Services/Service';
+import Services from './pages/Home/Services/Services';
 import AuthProvider from './Context/AuthProvider';
 import MyOrders from './pages/Private/MyOrders/MyOrders';
 
@@ -27,7 +27,7 @@ function App() {
               <Home></Home>
             </Route>
             <Route path="/services">
-              <Service></Service>
+              <Services></Services>
             </Route>
             <Route path="/login">
               <Login></Login>
