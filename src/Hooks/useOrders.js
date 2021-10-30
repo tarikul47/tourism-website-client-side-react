@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 
-const useOrders = () => {
-  const [orders, setServices] = useState([]);
+const useOrders = (userEmail='') => {
+  const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    fetch("https://stark-hamlet-23308.herokuapp.com/orders")
+    fetch(`https://stark-hamlet-23308.herokuapp.com/orders/${userEmail}`)
       .then((response) => response.json())
-      .then((data) => setServices(data));
+      .then((data) => setOrders(data));
   }, []);
-  return [orders, setServices];
+  return [orders, setOrders];
 };
 
 export default useOrders;

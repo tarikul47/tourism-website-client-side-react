@@ -1,17 +1,17 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Header from './pages/Shared/Header/Header';
-import Home from './pages/Home/Home/Home';
-import Login from './pages/Login/Login/Login';
-import NotFound from './pages/Shared/NotFound/NotFound';
-import ManageAllOrder from './pages/Private/ManageAllOrders/ManageAllOrder';
-import AddService from './pages/Private/AddService/AddService';
-import Booking from './pages/Booking/Booking';
-import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
-import Footer from './pages/Shared/Footer/Footer';
-import './App.css';
-import Services from './pages/Home/Services/Services';
-import AuthProvider from './Context/AuthProvider';
-import MyOrders from './pages/Private/MyOrders/MyOrders';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Header from "./pages/Shared/Header/Header";
+import Home from "./pages/Home/Home/Home";
+import Login from "./pages/Login/Login/Login";
+import NotFound from "./pages/Shared/NotFound/NotFound";
+import ManageAllOrder from "./pages/Private/ManageAllOrders/ManageAllOrder";
+import AddService from "./pages/Private/AddService/AddService";
+import Booking from "./pages/Booking/Booking";
+import PrivateRoute from "./pages/Login/PrivateRoute/PrivateRoute";
+import Footer from "./pages/Shared/Footer/Footer";
+import "./App.css";
+import Services from "./pages/Home/Services/Services";
+import AuthProvider from "./Context/AuthProvider";
+import MyOrders from "./pages/Private/MyOrders/MyOrders";
 
 function App() {
   return (
@@ -50,7 +50,7 @@ function App() {
           </Switch>
           <Footer></Footer>
         </Router>
-        </AuthProvider>
+      </AuthProvider>
     </div>
   );
 }
