@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const useOrders = (userEmail='') => {
+const useOrders = (userEmail=null) => {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
