@@ -1,10 +1,7 @@
 .booking-form{
-    height: 100vh;
-}
-.form-signin {
     padding: 15px;
     margin: auto;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }

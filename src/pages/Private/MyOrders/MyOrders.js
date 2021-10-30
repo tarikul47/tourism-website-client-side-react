@@ -1,10 +1,19 @@
 import React from 'react';
+import useAuth from '../../../Hooks/useAuth';
+import useOrders from '../../../Hooks/useOrders';
 
 const MyOrders = () => {
+    const {user} = useAuth()
+    const [orders] = useOrders();
+    const userOrders = orders.filter(order => order.email === user.email);
+    console.log(userOrders);
+
     return (
-        <div>
+        <>
             <h2>My Orders</h2>
-        </div>
+            <p>{userOrders.length}</p>
+            {}
+        </>
     );
 };
 

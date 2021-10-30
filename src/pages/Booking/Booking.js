@@ -31,17 +31,17 @@ const Booking = () => {
   };
 
   return (
-    <section className="form-signin booking-form">
+    <section className="booking-form">
       <div className="container">
         <div className="row">
           <div className="col-lg-4 mx-auto">
             <h3>Please Book Your Tarvel Spot</h3>
-            <p>{serviceId}</p>
+            <br />
             <form
               onSubmit={handleSubmit(onSubmit)}
               className="d-flex flex-column post-form"
             >
-              <label className="text-start ms-1" htmlFor="">
+              <label className="text-start ms-1 fw-bold" htmlFor="">
                 Travel Spot
               </label>
               <input
@@ -50,7 +50,7 @@ const Booking = () => {
                 defaultValue={sName}
                 readOnly
               />
-              <label className="text-start ms-1" htmlFor="">
+              <label className="text-start ms-1 fw-bold" htmlFor="">
                 User Name
               </label>
               <input
@@ -59,7 +59,7 @@ const Booking = () => {
                 defaultValue={user.displayName}
                 readOnly
               />
-              <label className="text-start ms-1" htmlFor="">
+              <label className="text-start ms-1 fw-bold" htmlFor="">
                 User Email
               </label>
               <input
@@ -68,7 +68,7 @@ const Booking = () => {
                 defaultValue={user.email}
                 readOnly
               />
-              <label className="text-start ms-1" htmlFor="">
+              <label className="text-start ms-1 fw-bold" htmlFor="">
                 Price
               </label>
               <input
@@ -78,7 +78,7 @@ const Booking = () => {
                 defaultValue={price}
                 readOnly
               />
-              <label className="text-start ms-1" htmlFor="">
+              <label className="text-start ms-1 fw-bold" htmlFor="">
                 Tarvel Time
               </label>
               <input
@@ -88,7 +88,7 @@ const Booking = () => {
                 defaultValue={travel_time}
                 readOnly
               />
-              <label className="text-start ms-1" htmlFor="">
+              <label className="text-start ms-1 fw-bold" htmlFor="">
                 User Address
               </label>
               <textarea
@@ -96,7 +96,7 @@ const Booking = () => {
                 {...register("address", { required: true })}
                 placeholder="Your Address"
               />
-              <select {...register("status", { required: true })}>
+              <select {...register("status", { required: true })} hidden>
                 <option value="pending">Pending</option>
                 <option value="approved">Approved</option>
               </select>
