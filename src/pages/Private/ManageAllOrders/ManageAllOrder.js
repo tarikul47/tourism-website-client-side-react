@@ -4,6 +4,7 @@ import useOrders from "../../../Hooks/useOrders";
 const ManageAllOrder = () => {
   const [orders, setOrders] = useOrders("");
 
+  // delete 
   const orderDeleteHandle = (id) => {
     if (window.confirm("Do you want to delete?")) {
       fetch(`https://stark-hamlet-23308.herokuapp.com/orders/${id}`, {
