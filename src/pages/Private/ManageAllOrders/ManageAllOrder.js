@@ -84,12 +84,16 @@ const ManageAllOrder = () => {
                       </p>
                     </div>
                     <div className="d-flex justify-content-around">
-                      <button
+                      {
+                        order.status === "Approved" ? "" : <>
+                        <button
                         onClick={() => handleUpdateStatus(order._id)}
                         className="btn btn-info"
                       >
                         Order Update
                       </button>
+                        </>
+                      }
                       <button
                         onClick={() => orderDeleteHandle(order._id)}
                         className="btn btn-warning"
