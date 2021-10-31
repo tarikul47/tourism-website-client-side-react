@@ -9,3 +9,11 @@
     position: relative;
     z-index: 1;
 }
+
+
+@media screen and (max-width: 768px) {
+    .popular_places_area {
+        padding-top: 80px;
+        padding-bottom: 5px;
+    }
+  }
