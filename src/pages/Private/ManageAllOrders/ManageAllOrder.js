@@ -18,13 +18,32 @@ const ManageAllOrder = () => {
         });
     }
   };
+
+  // update status
+
+  const handleUpdateStatus = (id) => {
+    if (window.confirm("Do you want update order status?")) {
+      fetch(`https://stark-hamlet-23308.herokuapp.com/orders/${id}`, {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify({
+          status: "Approved",
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => console.log(data));
+    }
+  };
+
   return (
     <>
       <div className="container py-5">
         <h2 className="my-5">Manage Orders</h2>
         <div className="row gy-5">
           {orders.map((order) => (
-            <div className="col-lg-4 col-md-6">
+            <div key={order._id} className="col-lg-4 col-md-6">
               <div className="single_place">
                 <h2 className="my-3">
                   <span className="fw-bold">Travel Spot: </span>
@@ -54,7 +73,12 @@ const ManageAllOrder = () => {
                   </p>
                 </div>
                 <div className="d-flex justify-content-around">
-                  <button className="btn btn-info">Order Update</button>
+                  <button
+                    onClick={() => handleUpdateStatus(order._id)}
+                    className="btn btn-info"
+                  >
+                    Order Update
+                  </button>
                   <button
                     onClick={() => orderDeleteHandle(order._id)}
                     className="btn btn-warning"
