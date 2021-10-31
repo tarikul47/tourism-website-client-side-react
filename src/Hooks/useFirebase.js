@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Redirect } from "react-router";
 import initializeAppAuthentication from "../pages/Login/Firebase/firebase.init";
 import {
   getAuth,
@@ -28,6 +29,7 @@ const useFirebase = () => {
     signOut(auth)
       .then(() => {
         setUser({});
+        <Redirect to="/" />
       })
       .catch((error) => {
         setError(error.message);
