@@ -1,8 +1,8 @@
 # Getting Started with Travelo
 
-This project is [Travelo](https://github.com/facebook/create-react-app).
+This project is [Travelo](https://tourism-client-website.web.app/).
 
-## Available Scripts
+## The features of project are: 
 
 * Using React JS
 * Css Bootstrap framework
